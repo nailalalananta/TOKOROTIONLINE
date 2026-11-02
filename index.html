@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SweetBite Bakery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app">
+    <div class="top-strip">
+        🥐 Freshly baked every day · Dibuat dengan cinta
+    </div>
+
+    <header class="header">
+        <div class="head-inner">
+            <div class="logo">
+                <span class="logo-mark">🥯</span>
+                SweetBite Bakery
+            </div>
+
+            <form class="search" id="searchForm">
+                <input id="searchInput" placeholder="Cari roti favoritmu...">
+                <button type="submit">Cari</button>
+            </form>
+
+            <div class="actions">
+                <button class="icon-btn" id="accountBtn">♙</button>
+                <button class="icon-btn" id="ordersBtn">▤</button>
+                <button class="icon-btn" id="cartBtn">
+                    🛒 <span id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+
+        <nav class="nav">
+            <a data-scroll="home">Beranda</a>
+            <a data-scroll="categories">Kategori</a>
+            <a data-scroll="productsSection">Produk</a>
+            <a id="trackNav">Pesanan</a>
+            <a id="adminNav">Admin Toko</a>
+        </nav>
+    </header>
+
+    <main id="home">
+
+        <section class="hero">
+            <div class="hero-copy">
+                <span class="eyebrow">Baked with love</span>
+                <h1>Hangat dari oven,<br>bahagia sampai rumah.</h1>
+                <p>
+                    Temukan roti lembut, pastry renyah,
+                    dan camilan manis yang dibuat segar setiap hari.
+                </p>
+                <button class="primary" data-scroll="productsSection">
+                    Belanja Sekarang →
+                </button>
+            </div>
+
+            <div class="hero-art">
+                <span>🥐</span>
+                <div class="float-tag">Freshly baked ✨</div>
+            </div>
+        </section>
+
+        <div class="section-head" id="categories">
+            <div>
+                <h2>Jelajahi Kategori</h2>
+                <p>Pilih camilan sesuai suasana hatimu.</p>
+            </div>
+        </div>
+
+        <div class="categories" id="categoryList"></div>
+
+        <div class="section-head" id="productsSection">
+            <div>
+                <h2>Roti Pilihan Kami</h2>
+                <p>Favorit pelanggan yang wajib kamu coba.</p>
+            </div>
+
+            <div class="toolbar">
+                <select id="sortSelect">
+                    <option value="popular">Terpopuler</option>
+                    <option value="low">Harga terendah</option>
+                    <option value="high">Harga tertinggi</option>
+                    <option value="name">Nama A-Z</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="products" id="productGrid"></div>
+
+        <div class="benefits">
+            <div class="benefit">
+                🔥
+                <div>
+                    <b>Fresh setiap hari</b>
+                    <small>Dibuat setelah toko buka.</small>
+                </div>
+            </div>
+
+            <div class="benefit">
+                🚚
+                <div>
+                    <b>Pengiriman praktis</b>
+                    <small>Pesanan diproses dengan hati-hati.</small>
+                </div>
+            </div>
+
+            <div class="benefit">
+                💛
+                <div>
+                    <b>Dibuat sepenuh hati</b>
+                    <small>Bahan pilihan, rasa istimewa.</small>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div>
+                <h2>🥯 SweetBite Bakery</h2>
+                <p>
+                    Teman terbaik untuk sarapan,
+                    waktu santai, dan momen spesialmu.
+                </p>
+            </div>
+
+            <div>
+                <b>Informasi Toko</b>
+                <p>
+                    Jam operasional: 08.00–20.00 WIB<br>
+                    Kontak: hello@sweetbite.example
+                </p>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<div class="overlay" id="drawerOverlay">
+    <aside class="drawer">
+        <div class="drawer-head">
+            <h2 id="drawerTitle">Keranjang Belanja</h2>
+            <button class="close" id="closeDrawer">✕</button>
+        </div>
+        <div id="drawerContent"></div>
+    </aside>
+</div>
+
+<div class="modal-back" id="modalBack">
+    <div class="modal" id="modalContent"></div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
